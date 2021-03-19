@@ -9,7 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
-
+        <Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <!--컨트롤을 우클릭하면 여러 속성을 추가/조정할 수 있음. 
+        기본 우측 아래의 속성에서 여러 가지 조정할 수 있음, 
+        안드로이드 스튜디오에서 한 것과 비슷함
+        더블클릭 시 MainPOage.xaml.cs에 이벤트 함수가 생성-->
     </Grid>
 </Page>

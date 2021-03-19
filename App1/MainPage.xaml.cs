@@ -26,5 +26,15 @@ namespace App1
         {
             this.InitializeComponent();
         }
+
+        private async void button_Click(object sender, RoutedEventArgs e)
+        {
+            MediaElement mediaElement = new MediaElement();
+            var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+            Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("한국어 가능?");
+            mediaElement.SetSource(stream, stream.ContentType);
+            mediaElement.Play();
+            // 컴퓨터가 말함.
+        }
     }
 }
