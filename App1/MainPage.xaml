@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="button_Click" PointerEntered="button_PointerEntered" PointerExited="button_PointerExited"/>
+        <Button x:Name="button" Content="찾아보기" HorizontalAlignment="Center" VerticalAlignment="Center" Click="button_Click" PointerEntered="button_PointerEntered" PointerExited="button_PointerExited"/>
         <StackPanel>
             <TextBlock HorizontalAlignment="Center" Text="Enter your name"/>
             <TextBox HorizontalAlignment="Center" Width="200" Name="name"/>

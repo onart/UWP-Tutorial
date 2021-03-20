@@ -41,10 +41,26 @@ namespace App1
             if (sound == null) { 
                 sound = new MediaElement();
                 var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
-                Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("한국어 가능?");
+                Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("찾아보기");
                 sound.SetSource(stream, stream.ContentType);
             }
             sound.Play();
+            var folderPicker = new Windows.Storage.Pickers.FolderPicker();
+            folderPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Desktop;
+            folderPicker.FileTypeFilter.Add("*");
+
+            Windows.Storage.StorageFolder folder = await folderPicker.PickSingleFolderAsync();
+            if (folder != null)
+            {
+                Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+                button.Content = folder.Name;
+                //folder.GetItemsAsync();: 그 폴더 하위를 가져옴
+            }
+            else
+            {
+                button.Content = "취소됨";
+            }
+
             // 컴퓨터가 말함. https://docs.microsoft.com/ko-kr/uwp/api/windows.media.speechsynthesis?view=winrt-19041
         }
 
