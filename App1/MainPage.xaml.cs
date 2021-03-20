@@ -27,6 +27,13 @@ namespace App1
         public MainPage()
         {
             this.InitializeComponent();
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+            /*
+            Page1 생성자에서, NavigationCacheMode 를 Enabled 로 설정해 프레임 페이지 캐시가 초과하지 않는 한 페
+            이지의 모든 콘텐츠와 상태 값을 보관할 수 있습니다.NavigationCacheMode를 Required로 설정하면, 프레
+            임에서 캐시 저장되는 탐색 기록의 페이지 수를 지정하는 CacheSize 제한을 무시할 수 있습니다. 그러나 캐시
+            크기 제한은 디바이스의 메모리 제한에 따라 중요할 수 있습니다.
+             */
         }
 
         private async void button_Click(object sender, RoutedEventArgs e)
