@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="button_Click"/>
+        <Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="button_Click" PointerEntered="button_PointerEntered" PointerExited="button_PointerExited"/>
 
         <!--컨트롤을 우클릭하면 여러 속성을 추가/조정할 수 있음. 
         기본 우측 아래의 속성에서 여러 가지 조정할 수 있음, 
