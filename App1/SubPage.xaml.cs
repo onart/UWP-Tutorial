@@ -31,5 +31,18 @@ namespace App1
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {//Page가 로드되고 상위 Frame의 현재 소스가 될 때 호출됩니다.
+            if(e.Parameter is string && !string.IsNullOrWhiteSpace((string)e.Parameter))
+            {
+                greeting.Text = $"안녕하신가, {e.Parameter.ToString()}";
+            }
+            else
+            {
+                greeting.Text = "안녕하다.";
+            }
+            base.OnNavigatedTo(e);
+        }
     }
 }

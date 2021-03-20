@@ -44,6 +44,7 @@ namespace App1
         private void button_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             button.Background = new SolidColorBrush(color: Windows.UI.Color.FromArgb(155, 255, 255, 255));
+            //xaml에서 정의된 이름으로 접근
         }
 
         private void button_PointerExited(object sender, PointerRoutedEventArgs e)
@@ -53,7 +54,7 @@ namespace App1
 
         private void toSub_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SubPage));   //이 프레임에 SubPage를 연다(Navigate)
+            this.Frame.Navigate(typeof(SubPage), name.Text);   //이 프레임에 SubPage를 연다(Navigate)
             /*
              Frame 및 Page 클래스 정보
             여기서 코드는 앱의 초기 창 프레임에 대한 탐색이 실패할 경우 Navigate의 반환 값을 사용하여 앱 예외를 throw합니다.

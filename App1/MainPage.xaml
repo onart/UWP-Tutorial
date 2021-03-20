@@ -11,7 +11,12 @@
     <Grid>
 
         <Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" Click="button_Click" PointerEntered="button_PointerEntered" PointerExited="button_PointerExited"/>
-        <HyperlinkButton x:Name="toSub" Content="다른 창 열기" VerticalAlignment="Top" Margin="0,561,0,0" HorizontalAlignment="Center" Click="toSub_Click"/>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Text="Enter your name"/>
+            <TextBox HorizontalAlignment="Center" Width="200" Name="name"/>
+            <HyperlinkButton Content="Click to go to page 2"
+                             Click="toSub_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
 
         <!--컨트롤을 우클릭하면 여러 속성을 추가/조정할 수 있음. 
         기본 우측 아래의 속성에서 여러 가지 조정할 수 있음, 

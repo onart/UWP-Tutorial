@@ -9,7 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <HyperlinkButton x:Name="toMain" Content="메인 페이지로" Click="toMain_Click"
-                         HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Name="greeting"/>
+            <HyperlinkButton Content="Click to go to page 1" Click="toMain_Click"
+                             HorizontalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Page>
