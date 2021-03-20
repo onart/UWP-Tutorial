@@ -34,7 +34,7 @@ namespace App1
             Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("한국어 가능?");
             mediaElement.SetSource(stream, stream.ContentType);
             mediaElement.Play();
-            // 컴퓨터가 말함.
+            // 컴퓨터가 말함. https://docs.microsoft.com/ko-kr/uwp/api/windows.media.speechsynthesis?view=winrt-19041
         }
     }
 }
