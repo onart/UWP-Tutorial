@@ -35,7 +35,6 @@ namespace App1
             mediaElement.SetSource(stream, stream.ContentType);
             mediaElement.Play();
             // 컴퓨터가 말함. https://docs.microsoft.com/ko-kr/uwp/api/windows.media.speechsynthesis?view=winrt-19041
-            button.Content = "Click";
         }
 
         private void button_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -46,6 +45,11 @@ namespace App1
         private void button_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             button.Background = new SolidColorBrush(color: Windows.UI.Color.FromArgb(255, 100, 100, 100));
+        }
+
+        private void toSub_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SubPage));   //이 프레임에 SubPage를 연다(Navigate)
         }
     }
 }

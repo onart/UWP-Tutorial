@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <HyperlinkButton x:Name="toMain" Content="메인 페이지로" Click="toMain_Click"
+                         HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Page>
